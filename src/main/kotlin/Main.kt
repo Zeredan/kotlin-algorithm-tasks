@@ -1427,6 +1427,7 @@ fun Practise_3()
 {
     class TaskInfo(var content: @Composable () -> Unit, var midColor: Color, var sideColor: Color, var imagePath: String?, var name: String, var description: String)
     data class Ship(var name: String, var cannonballsRequired: Int, var treasury: Int)
+
     @Composable
     fun ColumnScope.OptionsSelector_1_2(wStr: MutableState<String>, targets: SnapshotStateList<Ship>)
     {
@@ -2247,7 +2248,7 @@ class Data
             MenuOption("1 лабораторная", mutableStateOf(0f), true, {Lab_1()}),
             MenuOption("2 практика", mutableStateOf(0f), true, {Practise_2()}),
             MenuOption("2 лабораторная", mutableStateOf(0f), true, {Lab_2()}),
-            MenuOption("3 практика", mutableStateOf(0f), false, {Practise_3()}),
+            MenuOption("3 практика", mutableStateOf(0f), true, {Practise_3()}),
             MenuOption("3 лабораторная", mutableStateOf(0f), true, {Lab_3()})
         )
     }
